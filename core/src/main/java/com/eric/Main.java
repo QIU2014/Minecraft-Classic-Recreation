@@ -10,11 +10,10 @@ public class Main extends Game {
     public static Main INSTANCE;
     private Version versionManager;
 
-    private final String VER = "v1.0.1";
-
     @Override
     public void create() {
         INSTANCE = this;
+        String VER = "v1.0.2";
         versionManager = new Version(VER);
 
         shader = new ShaderProgram(
@@ -39,7 +38,7 @@ public class Main extends Game {
     }
 
     public static class Version {
-        private String FULLVERSION;
+        private final String FULLVERSION;
         private String MAJOR;
         private String MINOR;
         private String PATCH;

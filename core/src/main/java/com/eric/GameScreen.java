@@ -43,7 +43,7 @@ public class GameScreen implements Screen {
 
         // --- input ---
         if (Gdx.input.isCursorCatched()) {
-            player.turn(Gdx.input.getDeltaX(), Gdx.input.getDeltaY());
+            player.turn(-Gdx.input.getDeltaX(), -Gdx.input.getDeltaY());
         }
 
         if (Gdx.input.isButtonJustPressed(Input.Buttons.RIGHT) && hitResult != null) {
@@ -81,10 +81,9 @@ public class GameScreen implements Screen {
         Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT | GL20.GL_DEPTH_BUFFER_BIT);
 
         // --- shader uniforms ---
-        shader.begin();
+        shader.bind();
         shader.setUniformMatrix("u_projTrans", player.camera.combined);
         shader.setUniformi("u_texture", 0);
-        shader.end();
 
         Gdx.gl.glClearColor(0.5f, 0.8f, 1.0f, 1f);   // sky color
         Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT | GL20.GL_DEPTH_BUFFER_BIT);
