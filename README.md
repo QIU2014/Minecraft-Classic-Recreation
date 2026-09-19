@@ -1,5 +1,7 @@
 # Minecraft
 
+[![Gradle Package](https://github.com/QIU2014/Minecraft-Classic-Recreation/actions/workflows/gradle-publish.yml/badge.svg?branch=master)](https://github.com/QIU2014/Minecraft-Classic-Recreation/actions/workflows/gradle-publish.yml)
+
 A [libGDX](https://libgdx.com/) project generated with [gdx-liftoff](https://github.com/libgdx/gdx-liftoff).
 
 This project was generated with a template including simple application launchers and a main class extending `Game` that sets the first screen.
