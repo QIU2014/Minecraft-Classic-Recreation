@@ -34,10 +34,7 @@ jobs:
     - name: Build with Gradle
       run: bash ./gradlew build
 
-    # The USERNAME and TOKEN need to correspond to the credentials environment variables used in
-    # the publishing section of your build.gradle
-    - name: Publish to GitHub Packages
-      run: bash ./gradlew publish
-      env:
-        USERNAME: ${{ github.actor }}
-        TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    - uses: actions/upload-artifact@v7
+      with:
+        path: lwjgl3/build/libs/Minecraft-*.jar
+        archive: false
