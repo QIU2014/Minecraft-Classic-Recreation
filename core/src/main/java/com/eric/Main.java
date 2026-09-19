@@ -1,7 +1,5 @@
 package com.eric;
 
-import com.badlogic.gdx.Application;
-import com.badlogic.gdx.ApplicationLogger;
 import com.badlogic.gdx.Game;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.glutils.ShaderProgram;
@@ -16,7 +14,6 @@ public class Main extends Game {
 
     @Override
     public void create() {
-        Gdx.app.setLogLevel(Application.LOG_INFO);
         INSTANCE = this;
         versionManager = new Version(VER);
 
