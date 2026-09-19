@@ -6,7 +6,7 @@ body:
       attributes:
           value: |
               ## First of all
-              1. Please search for [existing issues](https://github.com/libgdx/libgdx/issues?q=is%3Aissue) about this problem first.
+              1. Please search for [existing issues](https://github.com/QIU2014/Minecraft-Classic-Recreation/issues?q=is%3Aissue) about this problem first.
 
     - type: textarea
       id: description
@@ -23,13 +23,12 @@ body:
           description: Steps to reproduce the behavior.
           placeholder: |
               Even if you think your issue is trivial to reproduce, please supply a [SSCCE](https://sscce.org/) that demonstrates your issue. This saves time on our end, and makes it much more likely that your issue will be fixed.
-              You can find barebones templates [here](https://libgdx.com/wiki/articles/getting-help)
 
     - type: input
       id: version
       attributes:
           label: version
-          description: Version of libGDX and/or relevant dependencies
+          description: Version of this project and/or relevant dependencies
           placeholder: |
                Please provide the version(s) affected
 
@@ -45,9 +44,6 @@ body:
           label: "Affected platforms"
           description: "Select all platforms where the issue occurs."
           options:
-           - label: "Android"
-           - label: "iOS"
-           - label: "HTML/GWT"
            - label: "Windows"
            - label: "Linux"
            - label: "macOS"
