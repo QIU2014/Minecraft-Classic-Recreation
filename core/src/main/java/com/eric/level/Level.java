@@ -99,7 +99,7 @@ public class Level {
                 for (int z = z0; z < z1; z++)
                     if (isSolidTile(x, y, z)) {
                         list.add(new AABB(x, y, z, x + 1, y + 1, z + 1));
-                        System.out.printf("Added to list: new AABB(%s, %s, %s, %s, %s, %s%n", x, y, z, x + 1, y + 1, z + 1);
+                        System.out.printf("Added to list: new AABB(%s, %s, %s, %s, %s, %s)%n", x, y, z, x + 1, y + 1, z + 1);
                     }
         return list;
     }

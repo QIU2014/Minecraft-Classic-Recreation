@@ -1,6 +1,7 @@
 package com.eric;
 
 import com.badlogic.gdx.Gdx;
+import com.badlogic.gdx.Input;
 import com.badlogic.gdx.Screen;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.GL20;
@@ -27,6 +28,7 @@ public class PauseScreen implements Screen {
     public PauseScreen(GameScreen parent) {
         this.game = Main.INSTANCE;
         this.parent = parent;
+        Gdx.gl.glDisable(GL20.GL_CULL_FACE);
         Gdx.input.setCursorCatched(false);
     }
 
@@ -71,6 +73,7 @@ public class PauseScreen implements Screen {
 
     private void onReturn() {
         // Switch back to the SAME GameScreen instance — preserves level, player, camera.
+        Gdx.gl.glEnable(GL20.GL_CULL_FACE);
         game.setScreen(parent);
         Gdx.input.setCursorCatched(true);
     }
@@ -90,6 +93,10 @@ public class PauseScreen implements Screen {
 
         stage.act(delta);
         stage.draw();
+
+        if (Gdx.input.isKeyJustPressed(Input.Keys.ESCAPE)) {
+            onReturn();
+        }
     }
 
     @Override public void resize(int width, int height) {

@@ -24,9 +24,9 @@ public class GameScreen implements Screen {
         this.shader = shader;
 
         Gdx.gl.glClearColor(FOG_R, FOG_G, FOG_B, 1f);
+        Gdx.gl.glEnable(GL20.GL_CULL_FACE);
         Gdx.gl.glEnable(GL20.GL_DEPTH_TEST);
         Gdx.gl.glDepthFunc(GL20.GL_LEQUAL);
-        // RubyDung did NOT enable culling — leave it off to match.
 
         this.level = new Level(256, 256, 64);
         this.levelRenderer = new LevelRenderer(level);

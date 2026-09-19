@@ -1,12 +1,29 @@
 package com.eric.level;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class Tile {
-    public static Tile rock  = new Tile(0);
-    public static Tile grass = new Tile(1);
+    private static Map<String, Tile> tiles = new HashMap<>();
+//    public static Tile rock  = new Tile(0);
+//    public static Tile grass = new Tile(1);
     private int tex = 0;
+
+    static {
+        tiles.put("rock", new Tile(0));
+        tiles.put("grass", new Tile(1));
+    }
 
     private Tile(int tex) {
         this.tex = tex;
+    }
+
+    public static void putTile(String name, int tex) {
+        tiles.put(name, new Tile(tex));
+    }
+
+    public static Tile getTile(String name) {
+        return tiles.get(name);
     }
 
     public void render(Tesselator t, Level level, int layer, int x, int y, int z) {
@@ -148,5 +165,10 @@ public class Tile {
             t.vertex(x1, y0, z1); t.vertex(x1, y0, z0); t.vertex(x1, y1, z0);
             t.vertex(x1, y0, z1); t.vertex(x1, y1, z0); t.vertex(x1, y1, z1);
         }
+    }
+
+    public static Map<String, Tile> getTiles()
+    {
+        return tiles;
     }
 }

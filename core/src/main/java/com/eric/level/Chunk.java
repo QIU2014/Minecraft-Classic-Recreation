@@ -39,8 +39,8 @@ public class Chunk {
                 for (int z = z0; z < z1; z++) {
                     if (level.isTile(x, y, z)) {
                         int tileTex = (y == level.depth * 2 / 3) ? 0 : 1;
-                        if (tileTex == 0) Tile.rock.render(t, level, layer, x, y, z);
-                        else              Tile.grass.render(t, level, layer, x, y, z);
+                        if (tileTex == 0) Tile.getTile("rock").render(t, level, layer, x, y, z);
+                        else              Tile.getTile("grass").render(t, level, layer, x, y, z);
                     }
                 }
             }

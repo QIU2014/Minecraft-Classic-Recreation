@@ -128,7 +128,7 @@ public class LevelRenderer implements LevelListener {
         t.init();
         t.color(1f, 1f, 1f);
         t.setAlpha(alpha);
-        Tile.rock.renderFace(t, h.x, h.y, h.z, h.f);
+        Tile.getTile("rock").renderFace(t, h.x, h.y, h.z, h.f);
 
         Mesh m = t.buildMesh(null);
         if (m != null) {
