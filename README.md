@@ -1,6 +1,11 @@
 # Minecraft
 
 [![Gradle Package](https://github.com/QIU2014/Minecraft-Classic-Recreation/actions/workflows/gradle-publish.yml/badge.svg?branch=master)](https://github.com/QIU2014/Minecraft-Classic-Recreation/actions/workflows/gradle-publish.yml)
+![GitHub License](https://img.shields.io/github/license/qiu2014/minecraft-classic-recreation)
+![GitHub repo size](https://img.shields.io/github/repo-size/qiu2014/minecraft-classic-recreation)
+![GitHub last commit](https://img.shields.io/github/last-commit/qiu2014/minecraft-classic-recreation)
+![GitHub Release](https://img.shields.io/github/v/release/qiu2014/minecraft-classic-recreation)
+
 
 A [libGDX](https://libgdx.com/) project generated with [gdx-liftoff](https://github.com/libgdx/gdx-liftoff).
 
